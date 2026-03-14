@@ -7,117 +7,115 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box}
-  :root{--gold:#B9924E;--gold-light:#d4b176;--dark:#3B3632;--cream:#FAF9F6;--blush:#F3D7C8;--white:#FFFFFF;--gl:#e8e2da;--gt:#8a8380}
-  body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
-  .pw{max-width:480px;margin:0 auto;padding:0 0 40px}
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#B9924E;--gold-light:#d4b176;--dark:#3B3632;--cream:#FAF9F6;--blush:#F3D7C8;--white:#FFFFFF;--gl:#e8e2da;--gt:#8a8380}
+body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
+.pw{max-width:480px;margin:0 auto;padding:0 0 40px}
 
-  /* Hero section - social follow gateway */
-  .hero{background:var(--dark);color:var(--white);padding:32px 24px 28px;text-align:center;border-radius:0 0 24px 24px;margin-bottom:24px;position:relative;overflow:hidden}
-  .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(185,146,78,.15) 0%,transparent 60%);pointer-events:none}
-  .hero img{width:80px;height:auto;filter:brightness(0) invert(1);margin-bottom:12px;position:relative}
-  .hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:var(--white);margin-bottom:4px;position:relative}
-  .hero .tg{font-size:11px;color:rgba(255,255,255,.6);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:20px;position:relative}
+/* Hero - social follow gateway */
+.hero{background:var(--dark);color:var(--white);padding:32px 24px 28px;text-align:center;border-radius:0 0 24px 24px;margin-bottom:24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(185,146,78,.15) 0%,transparent 60%);pointer-events:none}
+.hero img{width:80px;height:auto;filter:brightness(0) invert(1);margin-bottom:12px;position:relative}
+.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:var(--white);margin-bottom:4px;position:relative}
+.hero .tg{font-size:11px;color:rgba(255,255,255,.6);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:20px;position:relative}
+.wifi-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:20px;font-size:11px;color:rgba(255,255,255,.7);margin-bottom:20px;position:relative}
+.wifi-pill svg{width:14px;height:14px;fill:#4ade80}
+.social-cta{position:relative}
+.social-cta p{font-family:'Playfair Display',serif;font-size:16px;color:var(--white);margin-bottom:4px;font-weight:600}
+.social-cta .sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px}
+.social-btns{display:flex;gap:10px;justify-content:center}
+.sbig{flex:1;max-width:180px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:600;color:white;transition:all .25s}
+.sbig svg{width:20px;height:20px;flex-shrink:0}
+.sbig.fb{background:#1877F2}
+.sbig.fb:hover{background:#1565c0;transform:translateY(-2px);box-shadow:0 6px 20px rgba(24,119,242,.4)}
+.sbig.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
+.sbig.ig:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(220,39,67,.4)}
+.skip{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,.35);text-decoration:none;letter-spacing:.5px;position:relative}
 
-  /* WiFi connected pill */
-  .wifi-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:20px;font-size:11px;color:rgba(255,255,255,.7);margin-bottom:20px;position:relative}
-  .wifi-pill svg{width:14px;height:14px;fill:#4ade80}
+/* Content */
+.content{padding:0 20px}
+.s{margin-bottom:20px}
+.st{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.st .e{font-size:17px}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.c{background:var(--white);border:1px solid var(--gl);border-radius:12px;padding:14px 12px;text-decoration:none;text-align:center;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:5px}
+.c:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(185,146,78,.15)}
+.c .ci{font-size:24px;line-height:1}
+.c .cl{font-size:13px;font-weight:500;color:var(--dark);line-height:1.3}
+.c .cs{font-size:11px;color:var(--gt)}
+.cf{grid-column:1/-1}
 
-  /* Social CTA */
-  .social-cta{position:relative}
-  .social-cta p{font-family:'Playfair Display',serif;font-size:16px;color:var(--white);margin-bottom:4px;font-weight:600}
-  .social-cta .sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px}
-  .social-btns{display:flex;gap:10px;justify-content:center}
-  .sbig{flex:1;max-width:180px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:600;color:white;transition:all .25s;border:none;cursor:pointer}
-  .sbig svg{width:20px;height:20px;flex-shrink:0}
-  .sbig.fb{background:#1877F2}
-  .sbig.fb:hover{background:#1565c0;transform:translateY(-2px);box-shadow:0 6px 20px rgba(24,119,242,.4)}
-  .sbig.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
-  .sbig.ig:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(220,39,67,.4)}
+/* Booking widget */
+.booking-section{margin-bottom:20px}
+.booking-section .st{margin-bottom:8px}
+.booking-toggle{width:100%;padding:14px;background:var(--gold);color:var(--white);border:none;border-radius:12px;font-family:'Playfair Display',serif;font-size:15px;font-weight:600;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px}
+.booking-toggle:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(185,146,78,.3)}
+.booking-toggle .arrow{transition:transform .3s;font-size:12px}
+.booking-toggle.open .arrow{transform:rotate(180deg)}
+.booking-widget{overflow:hidden;max-height:0;transition:max-height .4s ease;border-radius:0 0 12px 12px}
+.booking-widget.open{max-height:750px}
+.booking-widget iframe{width:100%;min-height:710px;border:none;border-radius:0 0 12px 12px}
 
-  .skip{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,.35);text-decoration:none;letter-spacing:.5px;position:relative}
+/* Google review */
+.gr{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;color:var(--dark);background:var(--white);border:1px solid var(--gl);transition:all .2s;margin-bottom:20px}
+.gr:hover{border-color:#fbbc04;transform:translateY(-2px);box-shadow:0 4px 12px rgba(251,188,4,.2)}
+.gr svg{width:18px;height:18px;flex-shrink:0}
 
-  /* Content area */
-  .content{padding:0 20px}
+/* Divider */
+.dv{display:flex;align-items:center;gap:14px;margin:20px 0}
+.dv span{font-size:11px;color:#b0a99f;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap}
+.dv::before,.dv::after{content:'';flex:1;height:1px;background:var(--gl)}
 
-  /* Section styles */
-  .s{margin-bottom:20px}
-  .st{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
-  .st .e{font-size:17px}
+/* Newsletter */
+.nb{background:var(--white);border:1px solid var(--gl);border-radius:14px;padding:18px 16px;margin-bottom:20px}
+.nb h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:4px;font-weight:600}
+.nb p{font-size:12px;color:var(--gt);margin-bottom:12px;line-height:1.5}
+.fr{display:flex;gap:8px;margin-bottom:8px}
+.fr input{flex:1;padding:10px 12px;border:1px solid var(--gl);border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;color:var(--dark);background:var(--cream);outline:none;transition:border-color .2s}
+.fr input:focus{border-color:var(--gold)}
+.fr input::placeholder{color:#b0a99f}
+.sbtn{width:100%;padding:12px;background:var(--gold);color:var(--white);border:none;border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
+.sbtn:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(185,146,78,.3)}
+.gdpr{font-size:10px;color:#b0a99f;margin-top:8px;line-height:1.5}
+.sm{display:none;padding:14px;background:#e8f5e9;border-radius:8px;color:#2e7d32;font-size:13px;font-weight:500;text-align:center}
 
-  /* Card grid */
-  .cg{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .c{background:var(--white);border:1px solid var(--gl);border-radius:12px;padding:14px 12px;text-decoration:none;text-align:center;transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:5px}
-  .c:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 4px 12px rgba(185,146,78,.15)}
-  .c .ci{font-size:24px;line-height:1}
-  .c .cl{font-size:13px;font-weight:500;color:var(--dark);line-height:1.3}
-  .c .cs{font-size:11px;color:var(--gt)}
-  .cf{grid-column:1/-1}
-  .cgo{background:var(--gold)!important;border-color:var(--gold)!important}
-  .cgo .cl{color:white!important}
-  .cgo .cs{color:rgba(255,255,255,.8)!important}
-  .cgo:hover{background:var(--gold-light)!important;border-color:var(--gold-light)!important}
+/* Hours */
+.hb{background:var(--white);border:1px solid var(--gl);border-radius:14px;padding:16px;margin-bottom:20px}
+.hb h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:10px;font-weight:600;text-align:center}
+.hb h4{font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin:10px 0 6px;padding-top:8px;border-top:1px solid #f5f0eb}
+.hb h4:first-of-type{margin-top:0;padding-top:0;border-top:none}
+.hr{display:flex;justify-content:space-between;padding:4px 0;font-size:12px}
+.hr .d{color:var(--dark);font-weight:500}
+.hr .t{color:var(--gt)}
 
-  /* Google review */
-  .gr{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;border-radius:10px;text-decoration:none;font-size:13px;font-weight:500;color:var(--dark);background:var(--white);border:1px solid var(--gl);transition:all .2s;margin-bottom:20px}
-  .gr:hover{border-color:#fbbc04;transform:translateY(-2px);box-shadow:0 4px 12px rgba(251,188,4,.2)}
-  .gr svg{width:18px;height:18px;flex-shrink:0}
+/* Footer */
+.ft{text-align:center;padding-top:14px;border-top:1px solid var(--gl)}
+.ft p{font-size:11px;color:#c4bdb5;margin-bottom:3px}
+.ft a{color:var(--gold);text-decoration:none;font-size:12px}
 
-  /* Divider */
-  .dv{display:flex;align-items:center;gap:14px;margin:20px 0}
-  .dv span{font-size:11px;color:#b0a99f;text-transform:uppercase;letter-spacing:1.5px;white-space:nowrap}
-  .dv::before,.dv::after{content:'';flex:1;height:1px;background:var(--gl)}
-
-  /* Newsletter */
-  .nb{background:var(--white);border:1px solid var(--gl);border-radius:14px;padding:18px 16px;margin-bottom:20px}
-  .nb h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:4px;font-weight:600}
-  .nb p{font-size:12px;color:var(--gt);margin-bottom:12px;line-height:1.5}
-  .fr{display:flex;gap:8px;margin-bottom:8px}
-  .fr input{flex:1;padding:10px 12px;border:1px solid var(--gl);border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;color:var(--dark);background:var(--cream);outline:none;transition:border-color .2s}
-  .fr input:focus{border-color:var(--gold)}
-  .fr input::placeholder{color:#b0a99f}
-  .sbtn{width:100%;padding:12px;background:var(--gold);color:var(--white);border:none;border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
-  .sbtn:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(185,146,78,.3)}
-  .gdpr{font-size:10px;color:#b0a99f;margin-top:8px;line-height:1.5}
-  .sm{display:none;padding:14px;background:#e8f5e9;border-radius:8px;color:#2e7d32;font-size:13px;font-weight:500;text-align:center}
-
-  /* Hours */
-  .hb{background:var(--white);border:1px solid var(--gl);border-radius:14px;padding:16px;margin-bottom:20px}
-  .hb h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:10px;font-weight:600;text-align:center}
-  .hr{display:flex;justify-content:space-between;padding:5px 0;font-size:12px;border-bottom:1px solid #f5f0eb}
-  .hr:last-child{border-bottom:none}
-  .hr .d{color:var(--dark);font-weight:500}
-  .hr .t{color:var(--gt)}
-
-  /* Footer */
-  .ft{text-align:center;padding-top:14px;border-top:1px solid var(--gl)}
-  .ft p{font-size:11px;color:#c4bdb5;margin-bottom:3px}
-  .ft a{color:var(--gold);text-decoration:none;font-size:12px}
-
-  /* Animations */
-  @keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes fi{from{opacity:0}to{opacity:1}}
-  .hero{animation:fi .5s ease forwards}
-  .a{animation:fu .4s ease forwards;opacity:0}
-  .a:nth-child(1){animation-delay:.15s}.a:nth-child(2){animation-delay:.2s}.a:nth-child(3){animation-delay:.25s}
-  .a:nth-child(4){animation-delay:.3s}.a:nth-child(5){animation-delay:.35s}.a:nth-child(6){animation-delay:.4s}
-  .a:nth-child(7){animation-delay:.45s}.a:nth-child(8){animation-delay:.5s}.a:nth-child(9){animation-delay:.55s}
-  .a:nth-child(10){animation-delay:.6s}.a:nth-child(11){animation-delay:.65s}.a:nth-child(12){animation-delay:.7s}
+/* Animations */
+@keyframes fu{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.hero{animation:fi .5s ease forwards}
+.a{animation:fu .4s ease forwards;opacity:0}
+.a:nth-child(1){animation-delay:.15s}.a:nth-child(2){animation-delay:.2s}.a:nth-child(3){animation-delay:.25s}
+.a:nth-child(4){animation-delay:.3s}.a:nth-child(5){animation-delay:.35s}.a:nth-child(6){animation-delay:.4s}
+.a:nth-child(7){animation-delay:.45s}.a:nth-child(8){animation-delay:.5s}.a:nth-child(9){animation-delay:.55s}
+.a:nth-child(10){animation-delay:.6s}.a:nth-child(11){animation-delay:.65s}.a:nth-child(12){animation-delay:.7s}
 </style>
 </head>
 <body>
+<div class="pw">
 
 <!-- ===== HERO: Social follow gateway ===== -->
 <div class="hero">
   <img src="logo.png" alt="The Eight Bells">
   <h1>You're Connected</h1>
-  <p class="tg">The Eight Bells · Bolney</p>
-
+  <p class="tg">The Eight Bells &middot; Bolney</p>
   <div class="wifi-pill">
     <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
     Wi-Fi connected
   </div>
-
   <div class="social-cta">
     <p>Follow us for news &amp; offers</p>
     <p class="sub">Be the first to hear about events, seasonal menus &amp; special deals</p>
@@ -131,47 +129,46 @@
         Instagram
       </a>
     </div>
-    <a href="#directory" class="skip">Skip to pub guide ↓</a>
+    <a href="#directory" class="skip">Skip to pub guide &#8595;</a>
   </div>
 </div>
 
 <!-- ===== DIRECTORY ===== -->
 <div class="content" id="directory">
 
-  <!-- BOOK A TABLE -->
-  <div class="s a">
-    <div class="cg">
-      <a href="https://booking.resdiary.com/widget/Standard/TheEightBellsBolney/62321?includeJquery=false" target="_blank" class="c cf cgo">
-        <span class="ci">📅</span>
-        <span class="cl">Book a Table</span>
-        <span class="cs">Reserve online via ResDiary</span>
-      </a>
+  <!-- BOOK A TABLE - embedded ResDiary widget -->
+  <div class="booking-section a">
+    <button class="booking-toggle" id="booking-btn" onclick="toggleBooking()">
+      &#128197; Book a Table <span class="arrow">&#9660;</span>
+    </button>
+    <div class="booking-widget" id="booking-widget">
+      <iframe src="https://booking.resdiary.com/widget/Standard/TheEightBellsBolney/62321" allow="payment *" loading="lazy"></iframe>
     </div>
   </div>
 
   <!-- EAT & DRINK -->
   <div class="s a">
-    <p class="st"><span class="e">🍽</span> Eat &amp; Drink</p>
+    <p class="st"><span class="e">&#127860;</span> Eat &amp; Drink</p>
     <div class="cg">
       <a href="https://www.eightbellsbolney.com/foodanddrink" target="_blank" class="c cf">
-        <span class="ci">📋</span>
+        <span class="ci">&#128203;</span>
         <span class="cl">Our Menu &amp; Sunday Roast</span>
-        <span class="cs">Fresh, local, seasonal — served daily</span>
+        <span class="cs">Fresh, local, seasonal &mdash; served daily</span>
       </a>
     </div>
   </div>
 
   <!-- STAY WITH US -->
   <div class="s a">
-    <p class="st"><span class="e">🛏</span> Stay With Us</p>
+    <p class="st"><span class="e">&#128716;</span> Stay With Us</p>
     <div class="cg">
       <a href="https://www.eightbellsbolney.com/bandbrooms" target="_blank" class="c">
-        <span class="ci">🏠</span>
+        <span class="ci">&#127968;</span>
         <span class="cl">Our Rooms</span>
         <span class="cs">4-star B&amp;B cottage</span>
       </a>
       <a href="https://us2.cloudbeds.com/reservation/vi8vrt" target="_blank" class="c">
-        <span class="ci">🔑</span>
+        <span class="ci">&#128273;</span>
         <span class="cl">Book a Room</span>
         <span class="cs">Best price direct</span>
       </a>
@@ -180,10 +177,10 @@
 
   <!-- THINGS TO DO -->
   <div class="s a">
-    <p class="st"><span class="e">🧭</span> Things to Do</p>
+    <p class="st"><span class="e">&#129517;</span> Things to Do</p>
     <div class="cg">
       <a href="https://www.eightbellsbolney.com/thingstodoinbolney" target="_blank" class="c cf">
-        <span class="ci">🌿</span>
+        <span class="ci">&#127807;</span>
         <span class="cl">Explore Bolney &amp; Sussex</span>
         <span class="cs">Walks, wine estates, days out &amp; local attractions</span>
       </a>
@@ -194,12 +191,12 @@
   <div class="s a">
     <div class="cg">
       <a href="https://www.eightbellsbolney.com/home-1-1-2" target="_blank" class="c">
-        <span class="ci">🎉</span>
+        <span class="ci">&#127881;</span>
         <span class="cl">Plan an Event</span>
         <span class="cs">Private dining &amp; parties</span>
       </a>
       <a href="https://www.eightbellsbolney.com/gift-card" target="_blank" class="c">
-        <span class="ci">🎁</span>
+        <span class="ci">&#127873;</span>
         <span class="cl">Gift Vouchers</span>
         <span class="cs">Perfect presents</span>
       </a>
@@ -209,7 +206,7 @@
   <!-- GOOGLE REVIEW -->
   <a href="https://search.google.com/local/writereview?placeid=ChIJk6DZUhRFdUgRDH-X9TvF8mY" target="_blank" class="gr a">
     <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-    Enjoying your visit? Leave us a Google review ⭐
+    Enjoying your visit? Leave us a Google review &#11088;
   </a>
 
   <!-- NEWSLETTER -->
@@ -217,7 +214,7 @@
 
   <div class="nb a">
     <h3>Get the inside track</h3>
-    <p>Events, seasonal menus, special offers &amp; room deals — straight to your inbox.</p>
+    <p>Events, seasonal menus, special offers &amp; room deals &mdash; straight to your inbox.</p>
     <form id="nf" onsubmit="sub(event)">
       <div class="fr">
         <input type="text" name="fname" placeholder="First name" required>
@@ -227,31 +224,33 @@
         <input type="email" name="email" placeholder="Email address" required>
       </div>
       <button type="submit" class="sbtn" id="sbtn">Sign me up</button>
-      <p class="gdpr">We'll only email you the good stuff. Unsubscribe anytime. Your data stays with us — never shared.</p>
+      <p class="gdpr">We'll only email you the good stuff. Unsubscribe anytime. Your data stays with us &mdash; never shared.</p>
     </form>
-    <div class="sm" id="sm">✓ You're on the list! Watch your inbox.</div>
+    <div class="sm" id="sm">&#10003; You're on the list! Watch your inbox.</div>
   </div>
 
   <!-- OPENING HOURS -->
   <div class="hb a">
     <h3>Opening Hours</h3>
-    <div class="hr"><span class="d">Monday – Friday</span><span class="t">12–2.45pm · 6–8.45pm</span></div>
-    <div class="hr"><span class="d">Saturday</span><span class="t">12–8.45pm</span></div>
-    <div class="hr"><span class="d">Sunday</span><span class="t">12–5pm</span></div>
-    <div class="hr"><span class="d">Bar (Sun–Wed)</span><span class="t">11.30am–10pm</span></div>
-    <div class="hr"><span class="d">Bar (Thu–Sat)</span><span class="t">11.30am–11pm</span></div>
+    <h4>Pub</h4>
+    <div class="hr"><span class="d">Sunday &ndash; Wednesday</span><span class="t">11.30am &ndash; 10pm</span></div>
+    <div class="hr"><span class="d">Thursday &ndash; Saturday</span><span class="t">11.30am &ndash; 11pm</span></div>
+    <h4>Food Service</h4>
+    <div class="hr"><span class="d">Monday &ndash; Friday</span><span class="t">12 &ndash; 2.45pm &middot; 6 &ndash; 8.45pm</span></div>
+    <div class="hr"><span class="d">Saturday</span><span class="t">12 &ndash; 8.45pm</span></div>
+    <div class="hr"><span class="d">Sunday</span><span class="t">12 &ndash; 5pm</span></div>
   </div>
 
   <!-- CONTACT -->
   <div class="s a">
     <div class="cg">
       <a href="tel:01444657888" class="c">
-        <span class="ci">📞</span>
+        <span class="ci">&#128222;</span>
         <span class="cl">Call Us</span>
         <span class="cs">01444 657888</span>
       </a>
       <a href="https://www.eightbellsbolney.com/contactanddirections" target="_blank" class="c">
-        <span class="ci">📍</span>
+        <span class="ci">&#128205;</span>
         <span class="cl">Find Us</span>
         <span class="cs">Directions &amp; map</span>
       </a>
@@ -260,13 +259,20 @@
 
   <!-- FOOTER -->
   <div class="ft a">
-    <p>The Eight Bells · The Street · Bolney · RH17 5QW</p>
-    <p><a href="mailto:pub@eightbellsbolney.com">pub@eightbellsbolney.com</a> · <a href="https://www.eightbellsbolney.com" target="_blank">eightbellsbolney.com</a></p>
+    <p>The Eight Bells &middot; The Street &middot; Bolney &middot; RH17 5QW</p>
+    <p><a href="mailto:pub@eightbellsbolney.com">pub@eightbellsbolney.com</a> &middot; <a href="https://www.eightbellsbolney.com" target="_blank">eightbellsbolney.com</a></p>
   </div>
 
 </div>
+</div>
 
 <script>
+function toggleBooking(){
+  var w=document.getElementById('booking-widget');
+  var b=document.getElementById('booking-btn');
+  w.classList.toggle('open');
+  b.classList.toggle('open');
+}
 function sub(e){
   e.preventDefault();
   var b=document.getElementById('sbtn');
