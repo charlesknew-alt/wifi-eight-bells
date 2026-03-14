@@ -11,16 +11,16 @@
 :root{--gold:#B9924E;--gold-light:#d4b176;--dark:#3B3632;--cream:#FAF9F6;--blush:#F3D7C8;--white:#FFFFFF;--gl:#e8e2da;--gt:#8a8380}
 body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 .pw{max-width:480px;margin:0 auto;padding:0 0 40px}
-.hero{background:var(--dark);color:var(--white);padding:32px 24px 28px;text-align:center;border-radius:0 0 24px 24px;margin-bottom:24px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(135deg,rgba(185,146,78,.15) 0%,transparent 60%);pointer-events:none}
-.hero img{width:80px;height:auto;filter:brightness(0) invert(1);margin-bottom:12px;position:relative}
-.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:var(--white);margin-bottom:4px;position:relative}
-.hero .tg{font-size:11px;color:rgba(255,255,255,.6);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:20px;position:relative}
-.wifi-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:20px;font-size:11px;color:rgba(255,255,255,.7);margin-bottom:20px;position:relative}
+.hero{background:linear-gradient(160deg,#4a3f37 0%,#3B3632 40%,#2e2824 100%);color:var(--cream);padding:32px 24px 28px;text-align:center;border-radius:0 0 24px 24px;margin-bottom:24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at top right,rgba(185,146,78,.2) 0%,transparent 60%);pointer-events:none}
+.hero img{width:80px;height:auto;filter:brightness(0) invert(.9) sepia(.3) saturate(.5) hue-rotate(10deg);margin-bottom:12px;position:relative}
+.hero h1{font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:var(--gold-light);margin-bottom:4px;position:relative}
+.hero .tg{font-size:11px;color:rgba(250,249,246,.5);letter-spacing:2px;text-transform:uppercase;font-weight:300;margin-bottom:20px;position:relative}
+.wifi-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(185,146,78,.15);border:1px solid rgba(185,146,78,.25);padding:6px 14px;border-radius:20px;font-size:11px;color:var(--gold-light);margin-bottom:20px;position:relative}
 .wifi-pill svg{width:14px;height:14px;fill:#4ade80}
 .social-cta{position:relative}
-.social-cta p{font-family:'Playfair Display',serif;font-size:16px;color:var(--white);margin-bottom:4px;font-weight:600}
-.social-cta .sub{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px}
+.social-cta p{font-family:'Playfair Display',serif;font-size:16px;color:var(--cream);margin-bottom:4px;font-weight:600}
+.social-cta .sub{font-size:12px;color:rgba(250,249,246,.45);margin-bottom:16px}
 .social-btns{display:flex;gap:10px;justify-content:center}
 .sbig{flex:1;max-width:180px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 18px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:600;color:white;transition:all .25s}
 .sbig svg{width:20px;height:20px;flex-shrink:0}
@@ -28,7 +28,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 .sbig.fb:hover{background:#1565c0;transform:translateY(-2px);box-shadow:0 6px 20px rgba(24,119,242,.4)}
 .sbig.ig{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}
 .sbig.ig:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(220,39,67,.4)}
-.skip{display:block;margin-top:14px;font-size:11px;color:rgba(255,255,255,.35);text-decoration:none;letter-spacing:.5px;position:relative}
+.skip{display:block;margin-top:14px;font-size:11px;color:rgba(250,249,246,.3);text-decoration:none;letter-spacing:.5px;position:relative}
 .content{padding:0 20px}
 .s{margin-bottom:20px}
 .st{font-family:'Playfair Display',serif;font-size:16px;color:var(--dark);font-weight:600;margin-bottom:10px;display:flex;align-items:center;gap:8px}
@@ -58,9 +58,9 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 .nb h3{font-family:'Playfair Display',serif;font-size:15px;color:var(--dark);margin-bottom:4px;font-weight:600}
 .nb p{font-size:12px;color:var(--gt);margin-bottom:12px;line-height:1.5}
 .fr{display:flex;gap:8px;margin-bottom:8px}
-.fr input{flex:1;padding:10px 12px;border:1px solid var(--gl);border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;color:var(--dark);background:var(--cream);outline:none;transition:border-color .2s}
-.fr input:focus{border-color:var(--gold)}
-.fr input::placeholder{color:#b0a99f}
+.fr input,.fr textarea{flex:1;padding:10px 12px;border:1px solid var(--gl);border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;color:var(--dark);background:var(--cream);outline:none;transition:border-color .2s;resize:vertical}
+.fr input:focus,.fr textarea:focus{border-color:var(--gold)}
+.fr input::placeholder,.fr textarea::placeholder{color:#b0a99f}
 .sbtn{width:100%;padding:12px;background:var(--gold);color:var(--white);border:none;border-radius:8px;font-family:'Lato',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s}
 .sbtn:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 12px rgba(185,146,78,.3)}
 .gdpr{font-size:10px;color:#b0a99f;margin-top:8px;line-height:1.5}
@@ -83,12 +83,13 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 .a:nth-child(4){animation-delay:.3s}.a:nth-child(5){animation-delay:.35s}.a:nth-child(6){animation-delay:.4s}
 .a:nth-child(7){animation-delay:.45s}.a:nth-child(8){animation-delay:.5s}.a:nth-child(9){animation-delay:.55s}
 .a:nth-child(10){animation-delay:.6s}.a:nth-child(11){animation-delay:.65s}.a:nth-child(12){animation-delay:.7s}
+.a:nth-child(13){animation-delay:.75s}.a:nth-child(14){animation-delay:.8s}.a:nth-child(15){animation-delay:.85s}
 </style>
 </head>
 <body>
 <div class="pw">
 
-<!-- HERO: Social follow gateway -->
+<!-- HERO -->
 <div class="hero">
   <img src="logo.png" alt="The Eight Bells">
   <h1>You're Connected</h1>
@@ -117,7 +118,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 <!-- DIRECTORY -->
 <div class="content" id="directory">
 
-  <!-- BOOK A TABLE - embedded ResDiary -->
+  <!-- BOOK A TABLE -->
   <div class="booking-section a">
     <button class="booking-toggle" id="booking-btn" onclick="toggleBooking()">
       &#128197; Book a Table <span class="arrow">&#9660;</span>
@@ -185,10 +186,30 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
   </div>
 
   <!-- GOOGLE REVIEW -->
-  <a href="https://search.google.com/local/writereview?placeid=ChIJk6DZUhRFdUgRDH-X9TvF8mY" target="_blank" class="gr a">
+  <a href="https://g.page/r/CZwGkTs1HJ79EBM/review" target="_blank" class="gr a">
     <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
     Enjoying your visit? Leave us a Google review &#11088;
   </a>
+
+  <!-- CONTACT THE PUB -->
+  <div class="dv a"><span>Get in touch</span></div>
+  <div class="nb a">
+    <h3>Message the Pub</h3>
+    <p>Got a question, request or feedback? Drop us a message and we'll get back to you.</p>
+    <form id="cf" onsubmit="contact(event)">
+      <div class="fr">
+        <input type="text" name="cname" placeholder="Your name" required>
+      </div>
+      <div class="fr">
+        <input type="email" name="cemail" placeholder="Email address" required>
+      </div>
+      <div class="fr">
+        <textarea name="cmsg" placeholder="Your message..." rows="3" required></textarea>
+      </div>
+      <button type="submit" class="sbtn" id="cbtn">Send Message</button>
+    </form>
+    <div class="sm" id="csm">&#10003; Message sent! We'll get back to you soon.</div>
+  </div>
 
   <!-- NEWSLETTER -->
   <div class="dv a"><span>Join our newsletter</span></div>
@@ -206,7 +227,7 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
       <button type="submit" class="sbtn" id="sbtn">Sign me up</button>
       <p class="gdpr">We'll only email you the good stuff. Unsubscribe anytime. Your data stays with us &mdash; never shared.</p>
     </form>
-    <div class="sm" id="sm">&#10003; You're on the list! Watch your inbox.</div>
+    <div class="sm" id="nsm">&#10003; You're on the list! Watch your inbox.</div>
   </div>
 
   <!-- OPENING HOURS -->
@@ -247,33 +268,62 @@ body{font-family:'Lato',sans-serif;background:var(--cream);min-height:100vh}
 </div>
 
 <script>
+var SCRIPT_URL='https://script.google.com/macros/s/AKfycbxjPcxLqD75C8UwnvMPGNM1SjH7_ClTkVhU_ophUrBQl3uMAjv8N4XZVGHqhJ6_eOTNsQ/exec';
+
 function toggleBooking(){
   var w=document.getElementById('booking-widget');
   var b=document.getElementById('booking-btn');
   w.classList.toggle('open');
   b.classList.toggle('open');
 }
+
 function sub(e){
   e.preventDefault();
   var b=document.getElementById('sbtn');
   var f=e.target;
   b.disabled=true;
   b.textContent='Signing up...';
-  fetch('https://script.google.com/macros/s/AKfycbxjPcxLqD75C8UwnvMPGNM1SjH7_ClTkVhU_ophUrBQl3uMAjv8N4XZVGHqhJ6_eOTNsQ/exec',{
+  fetch(SCRIPT_URL,{
     method:'POST',
     mode:'no-cors',
     headers:{'Content-Type':'application/json'},
     body:JSON.stringify({
+      type:'newsletter',
       fname:f.fname.value,
       lname:f.lname.value,
       email:f.email.value
     })
   }).then(function(){
     f.style.display='none';
-    document.getElementById('sm').style.display='block';
+    document.getElementById('nsm').style.display='block';
   }).catch(function(){
     f.style.display='none';
-    document.getElementById('sm').style.display='block';
+    document.getElementById('nsm').style.display='block';
+  });
+}
+
+function contact(e){
+  e.preventDefault();
+  var b=document.getElementById('cbtn');
+  var f=e.target;
+  b.disabled=true;
+  b.textContent='Sending...';
+  fetch(SCRIPT_URL,{
+    method:'POST',
+    mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      type:'contact',
+      name:f.cname.value,
+      email:f.cemail.value,
+      message:f.cmsg.value
+    })
+  }).then(function(){
+    f.style.display='none';
+    document.getElementById('csm').style.display='block';
+  }).catch(function(){
+    f.style.display='none';
+    document.getElementById('csm').style.display='block';
   });
 }
 </script>
